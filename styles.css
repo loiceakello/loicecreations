@@ -1,0 +1,88 @@
+h2 {
+  color: #00d9ff; /* Light cyan color for headings */
+}
+
+header {
+  display: flex;
+  flex-direction: column; /* stack items vertically */
+  align-items: center;    /* center horizontally */
+  padding: 2rem;
+  background: rgba(0,0,0,0.4);
+  position: relative;
+  top: 0;
+}
+
+header img.profile {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%; /* circular photo */
+  border: 3px solid #00d9ff;
+  object-fit: cover;
+  margin-bottom: 1rem; /* space between image and h1 */
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00d9ff;
+  text-align: center;
+}
+
+.header-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* nav on left, toggle on right */
+  align-items: center;
+}
+
+.top-nav {
+  display: flex;
+  gap: 2rem; /* space between links */
+}
+
+.top-nav a {
+  color: #00d9ff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.top-nav a:hover {
+  color: #c3c8c9;
+}
+
+.toggle-btn {
+  font-size: 0.5rem;
+  background: #00d9ff;
+  border: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 2.5px;
+  cursor: pointer;
+  color: #000;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.gallery-item {
+  text-align: center; /* centers h3 and image */
+}
+
+.gallery-item h3 {
+  margin-bottom: 0.5rem;
+  color: #00ff55;
+}
+
+.gallery-item img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+}
