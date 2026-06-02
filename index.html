@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loice Akello | Full Stack Developer</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      line-height: 1.6;
+      transition: background 0.5s, color 0.5s;
+    }
+
+    body.light {
+      background: #f5f5f5;
+      color: #333;
+    }
+
+    .hero {
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 10%;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      animation: fadeInDown 1.5s ease;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      animation: fadeInUp 2s ease;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    section {
+      padding: 4rem 10%;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      padding: 2rem;
+      border-radius: 10px;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      background: rgba(255,255,255,0.1);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: rgba(0,0,0,0.6);
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #00d9ff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-top">
+    <nav class="top-nav">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Toggle mode button on far right -->
+    <button class="toggle-btn" onclick="toggleTheme()">Toggle Mode</button>
+    </div>
+  
+  <!-- Profile image -->
+  <img src="images/profile.jpg" alt="Loice Akello" class="profile">
+
+  <!-- Name below the image -->
+  <h1>Loice Akello</h1>
+  </header>
+
+  <section class="hero">
+    <h2>Full Stack Developer</h2>
+    <p>Building seamless, modern web and mobile applications with React, Django, and SQLite. Passionate about offline-first design and privacy-focused solutions.</p>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m Loice Akello, a freelance full stack developer specialising in mobile and web applications. I focus on creating robust, offline-first apps with clean UI/UX and compliance-driven publishing workflows.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="card-grid">
+      <div class="card"><h3>Frontend</h3><p>React Native, Expo, Next.js</p></div>
+      <div class="card"><h3>Backend</h3><p>Django, FastAPI, Node.js</p></div>
+      <div class="card"><h3>Database</h3><p>SQLite, PostgreSQL</p></div>
+      <div class="card"><h3>Other</h3><p>API Integration, UI/UX Design</p></div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="card-grid">
+      <div class="card"><h3>Wende Injili</h3><p>Offline-first hymn app with bundled SQLite database, published on Play Store.</p></div>
+      <div class="card"><h3>Portfolio Website</h3><p>Modern responsive design showcasing developer skills and projects.</p></div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <h2>Portfolio Gallery</h2>
+    <div class="gallery">
+      <div class="gallery-item">
+        <h3>Wende Injili Hymn App</h3>
+        <img src="images/hymn_app.jpg" alt="Wende Injili Project">
+      </div>
+
+      <div class="gallery-item">
+        <h3>Portfolio Website</h3>
+        <img src="images/portfolio.jpg" alt="Portfolio Website Project">
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:loicedoti@gmail.com">loicedoti@gmail.com</a></p>
+    <p>Phone: <a href="tel:+254724688224">+254724688224</a></p>
+    <p>LinkedIn: <a href="#">linkedin.com/in/loiceakello</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Loice Akello</p>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('light');
+    }
+  </script>
+</body>
+</html>
