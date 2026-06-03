@@ -18,7 +18,7 @@ header img.profile {
   border-radius: 50%; /* circular photo */
   border: 3px solid #00d9ff;
   object-fit: cover;
-  margin-bottom: 0.01rem; /* space between image and h1 */
+  margin-bottom: 0; /* removes space below image */ 
 }
 
 header h1 {
@@ -38,7 +38,7 @@ header h1 {
   width: 100%;
   display: flex;
   justify-content: center; /* centers the links horizontally */
-  gap: 2rem; /* spacing between links */
+  gap: 1rem; /* spacing between links */
 }
 
 .top-nav a {
