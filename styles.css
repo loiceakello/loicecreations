@@ -18,7 +18,7 @@ header img.profile {
   border-radius: 50%; /* circular photo */
   border: 3px solid #00d9ff;
   object-fit: cover;
-  margin-bottom: 1rem; /* space between image and h1 */
+  margin-bottom: 0.01rem; /* space between image and h1 */
 }
 
 header h1 {
@@ -37,7 +37,7 @@ header h1 {
 
 .top-nav {
   display: flex;
-  gap: 2rem; /* space between links */
+  gap: 1rem; /* space between links */
 }
 
 .top-nav a {
@@ -86,3 +86,101 @@ header h1 {
 .gallery-item img:hover {
   transform: scale(1.05);
 }
+
+ /* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      line-height: 1.6;
+      transition: background 0.5s, color 0.5s;
+    }
+
+    body.light {
+      background: #f5f5f5;
+      color: #333;
+    }
+
+    .hero {
+      height: 40vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 10%;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 0;
+      animation: fadeInDown 1.5s ease;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      animation: fadeInUp 2s ease;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    section {
+      padding: 1rem 10%;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      padding: 2rem;
+      border-radius: 10px;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      background: rgba(255,255,255,0.1);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: rgba(0,0,0,0.6);
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #00d9ff;
+      text-decoration: none;
+    }
