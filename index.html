@@ -9,23 +9,21 @@
 <body>
   <header>
     <div class="header-top">
-    <nav class="top-nav">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
     <!-- Toggle mode button on far right -->
     <button class="toggle-btn" onclick="toggleTheme()">Toggle Mode</button>
     </div>
-  
-  <!-- Profile image -->
-  <img src="images/profile.jpg" alt="Loice Akello" class="profile">
 
-  <!-- Name below the image -->
-  <h1>Loice Akello</h1>
+    <!-- Profile image -->
+    <img src="images/profile.jpg" alt="Loice Akello" class="profile">
+    
+    <!-- Navigation links below profile, aligned left -->
+    <nav class="top-nav">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+    </nav>
   </header>
 
   <section class="hero">
@@ -34,9 +32,14 @@
   </section>
 
   <section id="about">
-    <h2>About Me</h2>
-    <p>I’m Loice Akello, a freelance full stack developer specialising in mobile and web applications. I focus on creating robust, offline-first apps with clean UI/UX and compliance-driven publishing workflows.</p>
-  </section>
+  <h2>About Me</h2>
+  <div class="about-container">
+    <img src="images/profile.jpg" alt="Loice Akello" class="profile">
+    <p>
+      I’m Loice Akello, a freelance full stack developer specialising in mobile and web applications. I focus on creating robust, offline-first apps with clean UI/UX and compliance-driven publishing workflows.
+    </p>
+  </div>
+</section>
 
   <section id="skills">
     <h2>Skills</h2>

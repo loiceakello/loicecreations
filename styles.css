@@ -31,19 +31,21 @@ header h1 {
 .header-top {
   width: 100%;
   display: flex;
-  justify-content: space-between; /* nav on left, toggle on right */
-  align-items: center;
+  justify-content: flex-end; /* toggle button on far right */
 }
 
 .top-nav {
+  width: 100%;
   display: flex;
-  gap: 1rem; /* space between links */
+  justify-content: center; /* centers the links horizontally */
+  gap: 2rem; /* spacing between links */
 }
 
 .top-nav a {
   color: #00d9ff;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 700;
+  font-size: 1.25rem;
   transition: color 0.3s ease;
 }
 
@@ -184,3 +186,24 @@ header h1 {
       color: #00d9ff;
       text-decoration: none;
     }
+
+.about-container {
+  display: flex;
+  align-items: flex-start; /* aligns top edges */
+  gap: 1rem; /* space between text and photo */
+}
+
+.about-container p {
+  flex: 1; /* text takes remaining space */
+  width: 600px;       /* fixes the paragraph width */
+  font-size: 1rem;    /* optional: adjust text size */
+  line-height: 1.5;   /* optional: improves readability */
+}
+
+.about-container img.profile {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%; /* circular photo */
+  border: 3px solid #00d9ff;
+  object-fit: cover;
+}
