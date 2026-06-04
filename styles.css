@@ -1,5 +1,5 @@
 h2 {
-  color: #00d9ff; /* Light cyan color for headings */
+  color:  #00d9ff; /* bright cyan for section titles */
 }
 
 header {
@@ -39,17 +39,18 @@ header img.logo {
   color: #00d9ff;
   text-decoration: none;
   font-weight: 600;
-  font-size: clamp(1rem, 2vw, 1.25rem); /* responsive scaling */
-  transition: color 0.3s ease;
+  font-size: clamp(0.8rem, 3vw, 2.5rem); /* responsive scaling */
+  transition: color 0.3s ease, transform 0.3s ease; /* smooth hover effects */
 }
 
 .top-nav a:hover {
   color: #c3c8c9;
+  transform: scale(1.1); /* slight zoom on hover */
 }
 
 .toggle-btn {
   font-size: 0.5rem;
-  background: #00d9ff;
+  background: #00ff55;
   border: none;
   padding: 0.25rem 0.5rem;
   border-radius: 2.5px;
@@ -60,7 +61,7 @@ header img.logo {
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  gap: 0.5rem;
 }
 
 .gallery-item {
@@ -100,7 +101,7 @@ header img.logo {
     }
 
     .hero {
-      height: 40vh;
+      height: 30vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -133,18 +134,18 @@ header img.logo {
     }
 
     section {
-      padding: 1rem 10%;
+      padding: 0.5rem 10%;
     }
 
     .card-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
+      gap: 0.5rem;
     }
 
     .card {
-      background: rgba(255,255,255,0.05);
-      padding: 2rem;
+      background: rgba(255,255,255,0.1);
+      padding: 0.5rem;
       border-radius: 10px;
       transition: transform 0.3s ease, background 0.3s ease;
     }
@@ -157,13 +158,14 @@ header img.logo {
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
+      gap: 0.5rem;
     }
 
-    .gallery img {
-      width: 100%;
-      border-radius: 8px;
-      transition: transform 0.3s ease;
+    .gallery-item img {
+    width: 100%;
+    max-width: 200px;          
+    border-radius: 6px;
+    transition: transform 0.3s ease;
     }
 
     .gallery img:hover {
@@ -212,4 +214,12 @@ header img.logo {
   border-radius: 50%; /* circular photo */
   border: 3px solid #f5f5f5;
   object-fit: cover;
+}
+
+#skills h3 {
+  color: #ff8800;
+}
+
+#projects h3 {
+  color:  #00ff55;
 }
