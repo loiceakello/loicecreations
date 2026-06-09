@@ -5,8 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Loice Akello | Full Stack Developer</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
+  <div class="page">
   <header>
     <div class="header-top">
     <!-- Toggle mode button on far right -->
@@ -18,17 +21,21 @@
     
     <!-- Navigation links below profile, aligned left -->
     <nav class="top-nav">
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#contact">Contact</a>
+      <a href="#" onclick="showAllSections()">Home</a>
+      <a href="#" onclick="showSection('about')">About</a>
+      <a href="#" onclick="showSection('skills')">Skills</a>
+      <a href="#" onclick="showSection('projects')">Projects</a>
+      <a href="#" onclick="showSection('portfolio')">Portfolio</a>
+      <a href="#" onclick="showSection('contact')">Contact</a>
     </nav>
   </header>
 
   <section class="hero">
     <h1>Full Stack Developer</h1>
-    <p>Building seamless, modern web and mobile applications with React, Django, and SQLite. Passionate about offline-first design and privacy-focused solutions.</p>
+    <p>Building seamless, modern web and mobile applications that deliver consistent 
+      experiences across platforms. Passionate about offline‑first and online‑first design, 
+      while championing privacy‑focused solutions that respect and protect user trust.
+    </p>
   </section>
 
   <section id="about">
@@ -36,7 +43,21 @@
   <div class="about-container">
     <img src="images/profile.jpg" alt="Loice Akello" class="profile">
     <p>
-      I’m Loice Akello, a freelance full stack developer specialising in mobile and web applications. I focus on creating robust, offline-first apps with clean UI/UX and compliance-driven publishing workflows.
+     I’m Loice Akello, a freelance full stack developer specializing in both mobile and 
+     web applications. My expertise lies in building robust, scalable solutions designed 
+     for both offline‑first and online‑first experiences, paired with clean, intuitive UI/UX 
+     and workflows that meet strict compliance requirements.
+    </p>
+    <p> 
+      Beyond writing code, I take a holistic approach to development — ensuring every 
+      project is not only functional but also reliable, privacy‑conscious, and future‑ready. 
+      I thrive on transforming ideas into complete products, guiding them from concept to 
+      deployment with precision and care.
+    </p>
+    <p>
+      What sets me apart is my commitment to user trust and long‑term sustainability. 
+      Whether it’s architecting databases, streamlining deployment pipelines, or navigating 
+      publishing workflows, I deliver solutions that balance innovation with responsibility.
     </p>
   </div>
 </section>
@@ -63,8 +84,8 @@
     <h2>Portfolio Gallery</h2>
     <div class="gallery">
       <div class="gallery-item">
-        <h3>Wende Injili Hymn App</h3>
-        <img src="images/hymn_app.jpg" alt="Wende Injili Project">
+        <h3>Wende Injili App</h3>
+        <img src="images/wende_injili_images.jpg" alt="Wende Injili Project">
       </div>
 
       <div class="gallery-item">
@@ -75,11 +96,26 @@
   </section>
 
   <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:loicedoti@gmail.com">loicedoti@gmail.com</a></p>
-    <p>Phone: <a href="tel:+254724688224">+254724688224</a></p>
-    <p>LinkedIn: <a href="#">linkedin.com/in/loiceakello</a></p>
-  </section>
+  <h2>Contact</h2>
+  <div id="contact-info">
+    <p><i class="fas fa-envelope"></i> 
+      <a href="mailto:loicedoti@gmail.com">loicedoti@gmail.com</a>
+    </p>
+    <p><i class="fas fa-phone"></i> 
+      <a href="tel:+254724688224">+254724688224</a>
+    </p>
+    <p><i class="fab fa-linkedin"></i> 
+      <a href="https://www.linkedin.com/in/loice-akello-7051995l" target="_blank">Loice Akello</a>
+    </p>
+    <p><i class="fab fa-facebook"></i> 
+      <a href="https://facebook.com/loiceakello" target="_blank">Loice Akello</a>
+    </p>
+    <p><i class="fab fa-instagram"></i> 
+      <a href="https://instagram.com/loiceakello" target="_blank">loiceakello</a>
+    </p>
+  </div>
+</section>
+
 
   <footer>
     <p>&copy; 2026 Loice Akello.</p>
@@ -90,5 +126,59 @@
       document.body.classList.toggle('light');
     }
   </script>
+  
+  <script>
+function showSection(sectionId) {
+  // Hide all sections
+  document.querySelectorAll('section').forEach(sec => {
+    sec.classList.add('hidden');
+    sec.classList.remove('fade-in-down', 'fade-in-up');
+  });
+
+  // Show only the clicked section
+  const target = document.getElementById(sectionId);
+  target.classList.remove('hidden');
+
+  // Force reflow so animation restarts
+  void target.offsetWidth;
+
+  // Apply fade-in animation
+  if (sectionId === 'about' || sectionId === 'skills') {
+    target.classList.add('fade-in-down');
+  } else {
+    target.classList.add('fade-in-up');
+  }
+
+  // Update nav link highlight
+  document.querySelectorAll('.top-nav a').forEach(link => link.classList.remove('active'));
+  const activeLink = document.querySelector(`.top-nav a[onclick*="${sectionId}"]`);
+  if (activeLink) activeLink.classList.add('active');
+}
+
+function showAllSections() {
+  // Show all sections with fade-in-down
+  document.querySelectorAll('section').forEach(sec => {
+    sec.classList.remove('hidden');
+    sec.classList.remove('fade-in-up', 'fade-in-down');
+    void sec.offsetWidth; // force reflow
+    sec.classList.add('fade-in-down');
+  });
+
+  // Reset nav link highlight
+  document.querySelectorAll('.top-nav a').forEach(link => link.classList.remove('active'));
+
+  // Highlight Home link
+  const homeLink = document.querySelector('.top-nav a[onclick*="showAllSections"]');
+  if (homeLink) homeLink.classList.add('active');
+}
+
+// Default: show all sections on page load with fade-in-down
+document.addEventListener("DOMContentLoaded", () => {
+  showAllSections();
+});
+</script>
+
+
+</div>
 </body>
 </html>
