@@ -124,13 +124,13 @@ header img.logo {
 
     .hero h1 {
       color: #ff8800;
-      font-size: clamp(1.5rem, 5vw, 3rem);
+      font-size: clamp(2rem, 5vw, 3rem);
       margin-bottom: 0;
       animation: fadeInDown 1.5s ease;
     }
 
     .hero p {
-      font-size:  1.2rem;
+      font-size:  1.4rem;
       max-width: 600px;
       animation: fadeInUp 2s ease;
     }
@@ -204,7 +204,7 @@ header img.logo {
 
 .about-container p {
   max-width: 600px; /* limits line length for readability */
-  font-size: 0.8rem;
+  font-size: 1rem;
   display: inline-block; /* allows text to wrap nicely next to image */
 }
 
@@ -293,8 +293,8 @@ header img.logo {
 #contact-info a {
   color: rgb(89, 89, 231);        /* dark blue text */
   text-decoration: none;  /* remove underline */
-  font-weight: 500;       /* optional: make it bold */
-  font-size: 0.8rem;       /* slightly smaller text */
+  font-weight: 600;       /* optional: make it bold */
+  font-size: 1rem;       /* slightly smaller text */
   transition: color 0.3s ease;
 }
 
