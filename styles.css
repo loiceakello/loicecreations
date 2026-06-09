@@ -34,7 +34,7 @@ header img.logo {
   display: flex;
   flex-wrap: wrap; /* allows links to wrap on smaller screens */
   justify-content: center; /* centers the links horizontally */
-  gap: clamp(0.8rem, 3vw, 2rem); /* space between links */
+  gap: clamp(1rem, 3vw, 2rem); /* space between links */
 }
 
 .top-nav a {
