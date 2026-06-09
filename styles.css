@@ -41,7 +41,7 @@ header img.logo {
   color: #00d9ff;
   text-decoration: none;
   font-weight: 600;
-  font-size: clamp(0.8rem, 3vw, 2.5rem); /* responsive scaling */
+  font-size: clamp(1rem, 3vw, 2.5rem); /* responsive scaling */
   transition: color 0.3s ease, transform 0.3s ease; /* smooth hover effects */
 }
 
@@ -196,6 +196,10 @@ header img.logo {
     color: #ffffff;
     } 
 
+    footer.hidden {
+      display: none;       /* hide footer when not in Home */
+    }
+
 .about-container {
   display: flex;
   align-items: flex-start; /* aligns top edges */
@@ -274,7 +278,7 @@ header img.logo {
 
 #contact-info i {
   animation: blink 1s infinite; /* 1 second cycle, repeats forever */
-  font-size: 1rem;        /* scale icon size */
+  font-size: 1.5rem;        /* scale icon size */
   transition: transform 0.3s ease;
 }
 

@@ -127,7 +127,7 @@
     }
   </script>
   
-  <script>
+ <script>
 function showSection(sectionId) {
   // Hide all sections
   document.querySelectorAll('section').forEach(sec => {
@@ -149,6 +149,9 @@ function showSection(sectionId) {
     target.classList.add('fade-in-up');
   }
 
+  // Hide footer when viewing a single section
+  document.querySelector('footer').classList.add('hidden');
+
   // Update nav link highlight
   document.querySelectorAll('.top-nav a').forEach(link => link.classList.remove('active'));
   const activeLink = document.querySelector(`.top-nav a[onclick*="${sectionId}"]`);
@@ -164,6 +167,9 @@ function showAllSections() {
     sec.classList.add('fade-in-down');
   });
 
+  // Show footer only in Home view
+  document.querySelector('footer').classList.remove('hidden');
+
   // Reset nav link highlight
   document.querySelectorAll('.top-nav a').forEach(link => link.classList.remove('active'));
 
@@ -172,13 +178,11 @@ function showAllSections() {
   if (homeLink) homeLink.classList.add('active');
 }
 
-// Default: show all sections on page load with fade-in-down
+// Default: show all sections on page load with fade-in-down + footer
 document.addEventListener("DOMContentLoaded", () => {
   showAllSections();
 });
 </script>
-
-
 </div>
 </body>
 </html>
