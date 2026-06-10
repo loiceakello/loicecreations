@@ -175,7 +175,7 @@ header img.logo {
 
     .gallery-item img {
     width: 100%;
-    max-width: 200px;
+    max-width: 300px;
     height: auto;          
     border-radius: 6px;
     transition: transform 0.3s ease;
@@ -295,7 +295,7 @@ header img.logo {
 
 /* Style all contact-info links */
 #contact-info a {
-  color: rgb(89, 89, 231);        /* dark blue text */
+  color: #00ff55;      
   text-decoration: none;  /* remove underline */
   font-weight: 600;       /* optional: make it bold */
   font-size: 1rem;       /* slightly smaller text */
