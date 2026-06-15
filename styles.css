@@ -6,7 +6,7 @@ header {
   display: flex;
   flex-direction: column; /* stack items vertically */
   align-items: center;    /* center horizontally */
-  padding: 0.5rem;
+  padding: 1rem;
   background: rgba(0,0,0,0.4);
   position: relative;
   top: 0;
@@ -248,10 +248,6 @@ header img.logo {
   color: #D44638; /* Gmail red */
 }
 
-/* Facebook */
-#contact .fa-facebook {
-  color: #1877F2; /* Facebook blue */
-}
 
 /* Instagram (gradient effect) */
 #contact .fa-instagram {
@@ -264,10 +260,6 @@ header img.logo {
   background-clip: text;
 }
 
-/* LinkedIn */
-#contact .fa-linkedin {
-  color: #0077B5; /* LinkedIn blue */
-}
 
 /* Continuous blinking animation */
 @keyframes blink {
