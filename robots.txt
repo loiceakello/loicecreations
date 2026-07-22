@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://loiceakello.github.io/loicecreations/sitemap.xml
